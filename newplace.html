@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOPE PENGHU | 新增地點</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="public/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="min-h-screen flex flex-col">
+        <!-- App Header - Visible on all devices -->
+        <header class="bg-white shadow-md">
+            <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="explore.html" class="md:hidden mr-3">
+                        <i class="fas fa-arrow-left text-gray-600"></i>
+                    </a>
+                    <h1 class="text-xl font-bold text-gray-800">新增地點</h1>
+                </div>
+                <button class="text-primary font-medium">
+                    發布
+                </button>
+            </div>
+
+            <!-- Desktop Navigation - Only visible on desktop -->
+            <nav class="hidden md:flex border-t border-gray-200 px-4">
+                <a href="index.html" class="px-4 py-3 text-gray-500 hover:text-primary">首頁</a>
+                <a href="explore.html" class="px-4 py-3 text-gray-500 hover:text-primary">探索</a>
+                <a href="newplace.html" class="px-4 py-3 text-primary border-b-2 border-primary">新增地點</a>
+                <a href="coupon.html" class="px-4 py-3 text-gray-500 hover:text-primary">商家優惠</a>
+                <a href="coupon-package.html" class="px-4 py-3 text-gray-500 hover:text-primary">優惠組合</a>
+                <a href="#" class="px-4 py-3 text-gray-500 hover:text-primary">我的</a>
+            </nav>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-4 pb-20 md:pb-4">
+            <!-- Form Container -->
+            <div class="bg-white rounded-lg shadow-md p-4 md:p-6 max-w-3xl mx-auto">
+                <!-- Image Upload Section -->
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">上傳照片</label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <div class="aspect-square bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 transition">
+                            <i class="fas fa-camera text-2xl text-gray-400 mb-1"></i>
+                            <span class="text-xs text-gray-500">封面照片</span>
+                        </div>
+                        <div class="aspect-square bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 transition">
+                            <i class="fas fa-plus text-xl text-gray-400"></i>
+                        </div>
+                        <div class="aspect-square bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 transition">
+                            <i class="fas fa-plus text-xl text-gray-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-1">最多可上傳 9 張照片</p>
+                </div>
+                
+                <!-- Basic Information Section -->
+                <div class="mb-6">
+                    <label for="place-name" class="block text-gray-700 font-medium mb-2">地點名稱 <span class="text-red-500">*</span></label>
+                    <input type="text" id="place-name" placeholder="請輸入地點名稱" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                </div>
+                
+                <div class="mb-6">
+                    <label for="place-category" class="block text-gray-700 font-medium mb-2">類別 <span class="text-red-500">*</span></label>
+                    <div class="relative">
+                        <select id="place-category" class="appearance-none w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <option value="" disabled selected>請選擇類別</option>
+                            <option value="attraction">景點</option>
+                            <option value="food">美食</option>
+                            <option value="accommodation">住宿</option>
+                            <option value="activity">活動</option>
+                            <option value="other">其他</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="place-address" class="block text-gray-700 font-medium mb-2">地址 <span class="text-red-500">*</span></label>
+                    <div class="relative">
+                        <input type="text" id="place-address" placeholder="請輸入地址" class="w-full px-3 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <i class="fas fa-map-marker-alt absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                    <button class="mt-2 text-primary text-sm flex items-center">
+                        <i class="fas fa-location-arrow mr-1"></i>
+                        <span>定位目前位置</span>
+                    </button>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">營業時間</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm">星期一</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="flex space-x-2">
+                                <select class="flex-1 px-2 py-1 border border-gray-300 rounded-lg text-sm">
+                                    <option>09:00</option>
+                                </select>
+                                <span class="self-center">-</span>
+                                <select class="flex-1 px-2 py-1 border border-gray-300 rounded-lg text-sm">
+                                    <option>18:00</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm">星期二</span>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="flex space-x-2">
+                                <select class="flex-1 px-2 py-1 border border-gray-300 rounded-lg text-sm">
+                                    <option>09:00</option>
+                                </select>
+                                <span class="self-center">-</span>
+                                <select class="flex-1 px-2 py-1 border border-gray-300 rounded-lg text-sm">
+                                    <option>18:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="mt-3 text-primary text-sm flex items-center">
+                        <i class="fas fa-plus-circle mr-1"></i>
+                        <span>添加更多時間</span>
+                    </button>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="place-contacts" class="block text-gray-700 font-medium mb-2">聯絡方式</label>
+                    <div class="space-y-3">
+                        <div class="relative">
+                            <input type="tel" placeholder="電話號碼" class="w-full px-3 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <i class="fas fa-phone absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                        <div class="relative">
+                            <input type="text" placeholder="網站連結" class="w-full px-3 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <i class="fas fa-globe absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                        <div class="relative">
+                            <input type="text" placeholder="社交媒體連結" class="w-full px-3 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <i class="fab fa-facebook absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                    </div>
+                    <button class="mt-3 text-primary text-sm flex items-center">
+                        <i class="fas fa-plus-circle mr-1"></i>
+                        <span>添加其他聯絡方式</span>
+                    </button>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="place-description" class="block text-gray-700 font-medium mb-2">詳細描述</label>
+                    <textarea id="place-description" rows="4" placeholder="描述這個地點..." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="place-tags" class="block text-gray-700 font-medium mb-2">標籤</label>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm flex items-center">
+                            景觀
+                            <button class="ml-1 text-primary">
+                                <i class="fas fa-times-circle"></i>
+                            </button>
+                        </span>
+                        <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm flex items-center">
+                            歷史
+                            <button class="ml-1 text-primary">
+                                <i class="fas fa-times-circle"></i>
+                            </button>
+                        </span>
+                    </div>
+                    <div class="relative">
+                        <input type="text" id="place-tags" placeholder="新增標籤..." class="w-full px-3 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <i class="fas fa-tags absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                </div>
+                
+                <!-- Submit Button for desktop view, hidden on mobile -->
+                <div class="hidden md:block">
+                    <button class="w-full bg-primary text-white py-3 rounded-lg hover:bg-blue-600 transition">
+                        發布地點資訊
+                    </button>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Mobile Bottom Navigation - Only visible on mobile -->
+        <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around py-2 z-50">
+            <a href="index.html" class="flex flex-col items-center text-gray-500">
+                <i class="fas fa-home text-xl"></i>
+                <span class="text-xs mt-1">首頁</span>
+            </a>
+            <a href="explore.html" class="flex flex-col items-center text-gray-500">
+                <i class="fas fa-map-marker-alt text-xl"></i>
+                <span class="text-xs mt-1">探索</span>
+            </a>
+            <a href="newplace.html" class="flex flex-col items-center text-primary">
+                <i class="fas fa-plus-circle text-xl"></i>
+                <span class="text-xs mt-1">新增</span>
+            </a>
+            <a href="coupon.html" class="flex flex-col items-center text-gray-500">
+                <i class="fas fa-tag text-xl"></i>
+                <span class="text-xs mt-1">優惠</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-500">
+                <i class="fas fa-user text-xl"></i>
+                <span class="text-xs mt-1">我的</span>
+            </a>
+        </nav>
+        
+        <!-- Desktop Footer - Only visible on desktop -->
+        <footer class="bg-white py-4 border-t border-gray-200 hidden md:block">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="font-bold text-lg text-primary">HOPE PENGHU</h3>
+                        <p class="text-sm text-gray-500">探索澎湖最美的風景與美食</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-500 hover:text-primary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-primary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-primary"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="mt-4 text-center text-sm text-gray-500">
+                    <p>&copy; 2023 HOPE PENGHU. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

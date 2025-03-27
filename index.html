@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOPE PENGHU | 首頁</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="public/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="min-h-screen flex flex-col">
+        <!-- App Header - Visible on all devices -->
+        <header class="bg-white shadow-md">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-primary">HOPE PENGHU</h1>
+                <div class="flex space-x-2">
+                    <button class="p-2 rounded-full bg-gray-100">
+                        <i class="fas fa-search text-gray-500"></i>
+                    </button>
+                    <button class="p-2 rounded-full bg-gray-100">
+                        <i class="fas fa-user text-gray-500"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-6">
+            <!-- Hero Section -->
+            <div class="relative rounded-xl overflow-hidden h-48 md:h-64 mb-6">
+                <img src="https://images.unsplash.com/photo-1679778710489-bf49b2707837?q=80&w=1287&auto=format&fit=crop" 
+                     alt="澎湖美景" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+                    <h2 class="text-white text-xl md:text-2xl font-bold">探索澎湖的美麗海灣</h2>
+                    <p class="text-white text-sm md:text-base">與當地人分享最棒的旅遊體驗</p>
+                </div>
+            </div>
+            
+            <!-- Main Navigation -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <a href="explore.html" class="bg-blue-500 text-white p-4 rounded-lg flex flex-col items-center shadow-md hover:bg-blue-600 transition">
+                    <i class="fas fa-map-marked-alt text-2xl mb-2"></i>
+                    <span>探索澎湖</span>
+                </a>
+                <a href="newplace.html" class="bg-green-500 text-white p-4 rounded-lg flex flex-col items-center shadow-md hover:bg-green-600 transition">
+                    <i class="fas fa-plus-circle text-2xl mb-2"></i>
+                    <span>新增地點</span>
+                </a>
+                <a href="coupon.html" class="bg-amber-500 text-white p-4 rounded-lg flex flex-col items-center shadow-md hover:bg-amber-600 transition">
+                    <i class="fas fa-tag text-2xl mb-2"></i>
+                    <span>商家優惠</span>
+                </a>
+                <a href="coupon-package.html" class="bg-purple-500 text-white p-4 rounded-lg flex flex-col items-center shadow-md hover:bg-purple-600 transition">
+                    <i class="fas fa-gift text-2xl mb-2"></i>
+                    <span>優惠組合</span>
+                </a>
+            </div>
+            
+            <!-- Recently Added Places -->
+            <div class="mb-6">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="font-bold text-lg md:text-xl">最新景點</h3>
+                    <a href="explore.html" class="text-primary text-sm">查看更多</a>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1531136398070-93b63a70dfa7?q=80&w=1364&auto=format&fit=crop" 
+                             alt="二崁古厝" class="w-full h-24 md:h-32 object-cover">
+                        <div class="p-2">
+                            <h4 class="font-semibold text-sm md:text-base">二崁古厝</h4>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                <span>白沙鄉</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1598937577262-5762df39c673?q=80&w=1364&auto=format&fit=crop" 
+                             alt="澎湖水上活動中心" class="w-full h-24 md:h-32 object-cover">
+                        <div class="p-2">
+                            <h4 class="font-semibold text-sm md:text-base">水上活動中心</h4>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                <span>馬公市</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1570168756633-58c156f2068d?q=80&w=1364&auto=format&fit=crop" 
+                             alt="澎湖海上牧場" class="w-full h-24 md:h-32 object-cover">
+                        <div class="p-2">
+                            <h4 class="font-semibold text-sm md:text-base">海上牧場</h4>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                <span>湖西鄉</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-md md:block hidden">
+                        <img src="https://images.unsplash.com/photo-1487622750296-6360190669a1?q=80&w=1364&auto=format&fit=crop" 
+                             alt="郭家賓館" class="w-full h-32 object-cover">
+                        <div class="p-2">
+                            <h4 class="font-semibold">郭家賓館</h4>
+                            <div class="flex items-center text-xs text-gray-500">
+                                <i class="fas fa-map-marker-alt mr-1"></i>
+                                <span>馬公市</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Popular Coupons -->
+            <div>
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="font-bold text-lg md:text-xl">熱門優惠</h3>
+                    <a href="coupon.html" class="text-primary text-sm">查看更多</a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white rounded-lg shadow-md p-3 flex">
+                        <img src="https://images.unsplash.com/photo-1534331981677-1095255f54fc?q=80&w=1364&auto=format&fit=crop" 
+                             alt="阿豹香腸攤" class="w-16 h-16 rounded object-cover mr-3">
+                        <div class="flex-1">
+                            <h4 class="font-semibold">阿豹香腸攤</h4>
+                            <p class="text-sm text-gray-500 line-clamp-1">在地人推薦的澎湖小吃，以現烤香腸聞名</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded">8折優惠</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-3 flex">
+                        <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1364&auto=format&fit=crop" 
+                             alt="澎澄飯店" class="w-16 h-16 rounded object-cover mr-3">
+                        <div class="flex-1">
+                            <h4 class="font-semibold">澎澄飯店</h4>
+                            <p class="text-sm text-gray-500 line-clamp-1">澎湖最具規模的五星級度假飯店</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded">住宿85折</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Mobile Bottom Navigation - Only visible on mobile -->
+        <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around py-2 z-50">
+            <a href="index.html" class="flex flex-col items-center text-primary">
+                <i class="fas fa-home text-xl"></i>
+                <span class="text-xs mt-1">首頁</span>
+            </a>
+            <a href="explore.html" class="flex flex-col items-center text-gray-500">
+                <i class="fas fa-map-marker-alt text-xl"></i>
+                <span class="text-xs mt-1">探索</span>
+            </a>
+            <a href="newplace.html" class="flex flex-col items-center text-gray-500">
+                <i class="fas fa-plus-circle text-xl"></i>
+                <span class="text-xs mt-1">新增</span>
+            </a>
+            <a href="coupon.html" class="flex flex-col items-center text-gray-500">
+                <i class="fas fa-tag text-xl"></i>
+                <span class="text-xs mt-1">優惠</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-500">
+                <i class="fas fa-user text-xl"></i>
+                <span class="text-xs mt-1">我的</span>
+            </a>
+        </nav>
+        
+        <!-- Desktop Footer - Only visible on desktop -->
+        <footer class="bg-white py-4 border-t border-gray-200 hidden md:block">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="font-bold text-lg text-primary">HOPE PENGHU</h3>
+                        <p class="text-sm text-gray-500">探索澎湖最美的風景與美食</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-500 hover:text-primary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-primary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-primary"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="mt-4 text-center text-sm text-gray-500">
+                    <p>&copy; 2023 HOPE PENGHU. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
