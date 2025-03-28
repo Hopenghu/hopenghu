@@ -1,0 +1,20 @@
+{
+  "name": "hopenghu",
+  "version": "1.0.0",
+  "description": "HopenGhu Website Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "./start.sh",
+    "dev": "live-server --port=8000 --host=127.0.0.1 --no-browser",
+    "format": "prettier --write \"**/*.{html,css,js}\"",
+    "build": "echo 'Add build script here'",
+    "deploy": "echo 'Add deploy script here'"
+  },
+  "keywords": [],
+  "author": "Hopenghu",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^2.8.8"
+  }
+} 
