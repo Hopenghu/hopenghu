@@ -1,0 +1,5 @@
+# 將所有請求重定向到 index.html
+/* /index.html 200
+
+# 確保 /pages/* 路徑可以正確訪問
+/pages/* /pages/:splat 200 
