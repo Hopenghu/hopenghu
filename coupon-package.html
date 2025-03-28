@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOPE PENGHU | 優惠組合</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="public/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="min-h-screen flex flex-col">
+        <!-- App Header - Visible on all devices -->
+        <header class="bg-white shadow-md">
+            <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="coupon.html" class="md:hidden mr-3">
+                        <i class="fas fa-arrow-left text-gray-600"></i>
+                    </a>
+                    <h1 class="text-xl font-bold text-gray-800">優惠組合</h1>
+                </div>
+                <a href="#" class="text-primary font-medium">
+                    如何使用
+                </a>
+            </div>
+
+            <!-- Desktop Navigation - Only visible on desktop -->
+            <nav class="hidden md:flex border-t border-gray-200 px-4">
+                <a href="index.html" class="px-4 py-3 text-gray-500 hover:text-primary">首頁</a>
+                <a href="explore.html" class="px-4 py-3 text-gray-500 hover:text-primary">探索</a>
+                <a href="newplace.html" class="px-4 py-3 text-gray-500 hover:text-primary">新增地點</a>
+                <a href="coupon.html" class="px-4 py-3 text-gray-500 hover:text-primary">商家優惠</a>
+                <a href="coupon-package.html" class="px-4 py-3 text-primary border-b-2 border-primary">優惠組合</a>
+                <a href="#" class="px-4 py-3 text-gray-500 hover:text-primary">我的</a>
+            </nav>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-4 pb-20 md:pb-4">
+            <!-- Search Bar -->
+            <div class="mb-3">
+                <div class="relative">
+                    <input type="text" placeholder="搜尋優惠組合..." 
+                           class="w-full py-2 pl-10 pr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+            
+            <!-- Promotion Banner -->
+            <div class="relative rounded-xl overflow-hidden h-40 mb-5 shadow-md hidden md:block">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1364&auto=format&fit=crop" 
+                     alt="澎湖度假套票" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+                    <h2 class="text-white text-2xl font-bold">2023 澎湖度假全包式套票</h2>
+                    <p class="text-white/80">機票、住宿、景點門票一次搞定，最低 7 折起</p>
+                </div>
+            </div>
+            
+            <!-- Category Filters -->
+            <div class="flex overflow-x-auto py-2 gap-3 scrollbar-hide mb-3">
+                <button class="flex-shrink-0 px-4 py-1.5 rounded-full bg-primary text-white">
+                    全部
+                </button>
+                <button class="flex-shrink-0 px-4 py-1.5 rounded-full bg-gray-200 text-gray-700">
+                    度假套票
+                </button>
+                <button class="flex-shrink-0 px-4 py-1.5 rounded-full bg-gray-200 text-gray-700">
+                    美食饗宴
+                </button>
+                <button class="flex-shrink-0 px-4 py-1.5 rounded-full bg-gray-200 text-gray-700">
+                    活動體驗
+                </button>
+                <button class="flex-shrink-0 px-4 py-1.5 rounded-full bg-gray-200 text-gray-700">
+                    交通套票
+                </button>
+            </div>
+            
+            <!-- Filtering Options -->
+            <div class="flex justify-between items-center mb-3">
+                <div class="flex items-center gap-2">
+                    <button class="flex items-center text-sm px-3 py-1.5 rounded-full bg-gray-200 text-gray-700">
+                        <span>排序</span>
+                        <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <button class="flex items-center text-sm px-3 py-1.5 rounded-full bg-gray-200 text-gray-700">
+                        <span>價格</span>
+                        <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                </div>
+                <a href="coupon.html" class="text-sm flex items-center text-primary">
+                    <span>查看單一優惠</span>
+                    <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                </a>
+            </div>
+            
+            <!-- Content Area -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Package Item -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1364&auto=format&fit=crop" 
+                             alt="豪華雙人遊" class="w-full h-44 object-cover">
+                        <div class="absolute top-2 left-2 bg-accent text-white px-2 py-1 rounded text-sm">
+                            熱門
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-bold text-lg">豪華雙人遊</h3>
+                            <div class="bg-rose-500 text-white px-2 py-1 rounded text-sm">
+                                度假套票
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">包含澎澄飯店兩晚住宿、環島導覽、海上活動及餐飲優惠</p>
+                        
+                        <div class="mt-3">
+                            <div class="text-sm text-gray-500">包含以下優惠：</div>
+                            <ul class="mt-1 space-y-1 text-sm">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>澎澄飯店雙人房 8 折</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>環島遊覽車 9 折</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>水上活動中心 85 折</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-t border-dashed border-gray-200 my-3"></div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-500 text-sm line-through">原價 $9,800</span>
+                                <div class="text-red-500 font-bold text-lg">$7,680</div>
+                            </div>
+                            <button class="px-4 py-1.5 bg-primary text-white rounded-lg text-sm hover:bg-blue-600 transition">
+                                立即購買
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package Item -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1606492933608-81d70bd4f919?q=80&w=1364&auto=format&fit=crop" 
+                             alt="美食饗宴組合" class="w-full h-44 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-bold text-lg">美食饗宴組合</h3>
+                            <div class="bg-rose-500 text-white px-2 py-1 rounded text-sm">
+                                美食饗宴
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">享受澎湖在地美食，包含三家知名餐廳的優惠組合</p>
+                        
+                        <div class="mt-3">
+                            <div class="text-sm text-gray-500">包含以下優惠：</div>
+                            <ul class="mt-1 space-y-1 text-sm">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>澎湖海鮮餐廳 85 折</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>郭家賓館 9 折</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>阿豹香腸攤 8 折</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-t border-dashed border-gray-200 my-3"></div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-500 text-sm line-through">原價 $1,500</span>
+                                <div class="text-red-500 font-bold text-lg">$1,200</div>
+                            </div>
+                            <button class="px-4 py-1.5 bg-primary text-white rounded-lg text-sm hover:bg-blue-600 transition">
+                                立即購買
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package Item -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1592362159233-53cb4358070a?q=80&w=1364&auto=format&fit=crop" 
+                             alt="水上活動組合" class="w-full h-44 object-cover">
+                        <div class="absolute top-2 left-2 bg-accent text-white px-2 py-1 rounded text-sm">
+                            熱門
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-bold text-lg">水上活動組合</h3>
+                            <div class="bg-indigo-500 text-white px-2 py-1 rounded text-sm">
+                                活動體驗
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">全方位水上活動體驗，包含潛水、獨木舟等多種活動優惠</p>
+                        
+                        <div class="mt-3">
+                            <div class="text-sm text-gray-500">包含以下優惠：</div>
+                            <ul class="mt-1 space-y-1 text-sm">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>水上活動中心浮潛體驗買一送一</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>小門鯨魚洞獨木舟 9 折</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>海上牧場門票 75 折</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-t border-dashed border-gray-200 my-3"></div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-500 text-sm line-through">原價 $2,800</span>
+                                <div class="text-red-500 font-bold text-lg">$1,980</div>
+                            </div>
+                            <button class="px-4 py-1.5 bg-primary text-white rounded-lg text-sm hover:bg-blue-600 transition">
+                                立即購買
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package Item -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1364&auto=format&fit=crop" 
+                             alt="家庭度假套票" class="w-full h-44 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-bold text-lg">家庭度假套票</h3>
+                            <div class="bg-rose-500 text-white px-2 py-1 rounded text-sm">
+                                度假套票
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">適合全家出遊的優惠套票，親子活動與住宿餐飲皆有折扣</p>
+                        
+                        <div class="mt-3">
+                            <div class="text-sm text-gray-500">包含以下優惠：</div>
+                            <ul class="mt-1 space-y-1 text-sm">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>澎澄飯店四人房 75 折</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>水上活動中心親子票 8 折</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>海鮮餐廳兒童餐免費</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-t border-dashed border-gray-200 my-3"></div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-500 text-sm line-through">原價 $12,500</span>
+                                <div class="text-red-500 font-bold text-lg">$8,750</div>
+                            </div>
+                            <button class="px-4 py-1.5 bg-primary text-white rounded-lg text-sm hover:bg-blue-600 transition">
+                                立即購買
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package Item -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?q=80&w=1364&auto=format&fit=crop" 
+                             alt="澎湖環島交通套票" class="w-full h-44 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-bold text-lg">環島交通套票</h3>
+                            <div class="bg-emerald-500 text-white px-2 py-1 rounded text-sm">
+                                交通套票
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">澎湖交通工具合集，包含機車租借、交通船等多種優惠</p>
+                        
+                        <div class="mt-3">
+                            <div class="text-sm text-gray-500">包含以下優惠：</div>
+                            <ul class="mt-1 space-y-1 text-sm">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>星光機車租借三天特價</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>七美、望安交通船 9 折</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>環島遊覽車 85 折</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-t border-dashed border-gray-200 my-3"></div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-500 text-sm line-through">原價 $2,200</span>
+                                <div class="text-red-500 font-bold text-lg">$1,680</div>
+                            </div>
+                            <button class="px-4 py-1.5 bg-primary text-white rounded-lg text-sm hover:bg-blue-600 transition">
+                                立即購買
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package Item -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?q=80&w=1364&auto=format&fit=crop" 
+                             alt="情侶浪漫套票" class="w-full h-44 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-bold text-lg">浪漫情侶套票</h3>
+                            <div class="bg-indigo-500 text-white px-2 py-1 rounded text-sm">
+                                活動體驗
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">專為情侶設計的浪漫行程，包含景點、晚餐等多種優惠</p>
+                        
+                        <div class="mt-3">
+                            <div class="text-sm text-gray-500">包含以下優惠：</div>
+                            <ul class="mt-1 space-y-1 text-sm">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>澎澄飯店雙人房海景房 85 折</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>郭家賓館浪漫晚餐套餐 9 折</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>夕陽船遊半價優惠</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-t border-dashed border-gray-200 my-3"></div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-gray-500 text-sm line-through">原價 $6,800</span>
+                                <div class="text-red-500 font-bold text-lg">$5,480</div>
+                            </div>
+                            <button class="px-4 py-1.5 bg-primary text-white rounded-lg text-sm hover:bg-blue-600 transition">
+                                立即購買
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button - Only visible on larger screens -->
+            <div class="mt-6 text-center hidden md:block">
+                <button class="px-6 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition">
+                    載入更多優惠
+                </button>
+            </div>
+        </main>
+        
+        <!-- Mobile Bottom Navigation - Only visible on mobile -->
+        <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around py-2 z-50">
+            <a href="index.html" class="flex flex-col items-center text-gray-500">
+                <i class="fas fa-home text-xl"></i>
+                <span class="text-xs mt-1">首頁</span>
+            </a>
+            <a href="explore.html" class="flex flex-col items-center text-gray-500">
+                <i class="fas fa-map-marker-alt text-xl"></i>
+                <span class="text-xs mt-1">探索</span>
+            </a>
+            <a href="newplace.html" class="flex flex-col items-center text-gray-500">
+                <i class="fas fa-plus-circle text-xl"></i>
+                <span class="text-xs mt-1">新增</span>
+            </a>
+            <a href="coupon.html" class="flex flex-col items-center text-primary">
+                <i class="fas fa-tag text-xl"></i>
+                <span class="text-xs mt-1">優惠</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-500">
+                <i class="fas fa-user text-xl"></i>
+                <span class="text-xs mt-1">我的</span>
+            </a>
+        </nav>
+        
+        <!-- Desktop Footer - Only visible on desktop -->
+        <footer class="bg-white py-4 border-t border-gray-200 hidden md:block">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="font-bold text-lg text-primary">HOPE PENGHU</h3>
+                        <p class="text-sm text-gray-500">探索澎湖最美的風景與美食</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-500 hover:text-primary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-primary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-primary"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="mt-4 text-center text-sm text-gray-500">
+                    <p>&copy; 2023 HOPE PENGHU. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

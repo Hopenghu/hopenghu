@@ -10,7 +10,7 @@
 ### 安裝步驟
 1. 克隆專案
 ```bash
-git clone [your-repository-url]
+git clone https://github.com/Hopenghu/hopenghu.git
 cd hopenghu
 ```
 
@@ -48,4 +48,4 @@ hopenghu/
 ## 開發指南
 1. 使用 `npm run format` 格式化代碼
 2. 遵循 HTML5 和 CSS3 標準
-3. 確保響應式設計支持 
+3. 確保響應式設計支持
