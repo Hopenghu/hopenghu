@@ -1,51 +1,36 @@
-# HopenGhu Website Project
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## 開發環境設置
+## Getting Started
 
-### 必要條件
-- Node.js
-- Python 3
-- Git
+First, run the development server:
 
-### 安裝步驟
-1. 克隆專案
 ```bash
-git clone https://github.com/Hopenghu/hopenghu.git
-cd hopenghu
-```
-
-2. 安裝依賴
-```bash
-npm install
-```
-
-3. 啟動開發服務器
-```bash
-npm start
-# 或使用
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-### 專案結構
-```
-hopenghu/
-├── public/
-│   ├── css/
-│   ├── images/
-│   └── js/
-├── pages/
-│   ├── index.html
-│   ├── explore.html
-│   └── ...
-└── src/
-    ├── js/
-    └── css/
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 部署
-使用 Cloudflare Pages 進行部署。
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 開發指南
-1. 使用 `npm run format` 格式化代碼
-2. 遵循 HTML5 和 CSS3 標準
-3. 確保響應式設計支持
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
